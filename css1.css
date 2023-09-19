@@ -1,0 +1,102 @@
+/* .my-menu ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+   */
+  /* Position submenus relative to parent list item */
+  /* .my-menu li {
+    position: relative;
+
+  }
+  
+  /* Look, Ma! No onclick handler! */
+  /* .my-menu li:hover > ul {
+    display: block;
+  }
+  my-menu::after{
+      left: 10px;
+      transform: rotateZ('angle')
+  } */
+
+  
+  
+  
+  /* DEMO STYLES */
+  /* ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+.my-menu {
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+    max-width: 600px;
+    width: 80%;
+  }  */
+  body {
+    display: flex;
+    justify-content: center; /* Center the menu horizontally */
+    align-items: center; /* Center the menu vertically */
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .my-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 200px; /* Adjust this width as needed */
+  }
+  
+  .my-menu > li {
+    margin-bottom: 10px;
+    transition: transform 0.3s; /* Add a transition for smooth movement */
+    transform-origin: right center; /* Set the transformation origin */
+  }
+  
+  .my-menu > li:active {
+    transform: translateX(-100%); /* Move the menu item to the left */
+    animation: moveLeft 0.3s ease-in-out; /* Add animation when clicked */
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .my-menu a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .my-menu li ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+    display: none;
+  }
+  
+  .my-menu li:hover ul {
+    display: block;
+  }
+  
+  .my-menu li ul li a {
+    background-color: #e0e0e0;
+  }
+  
+  .my-menu svg {
+    float: right;
+    margin-right: 10px;
+  }
